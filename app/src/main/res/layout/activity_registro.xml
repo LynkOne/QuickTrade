@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registro">
+
+    <EditText
+        android:id="@+id/registro_email"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/e_mail_ejemplo_com"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@id/registro_nombre"
+        app:layout_constraintBottom_toTopOf="@id/registro_password"
+        android:layout_marginBottom="10dp"
+        android:importantForAutofill="no" tools:targetApi="O"/>
+
+    <EditText
+        android:id="@+id/registro_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/contrase_a"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@id/registro_nombre"
+        app:layout_constraintStart_toStartOf="@id/registro_nombre"
+        android:layout_marginBottom="10dp"
+        android:importantForAutofill="no" tools:targetApi="O"/>
+
+    <EditText
+        android:id="@+id/registro_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:importantForAutofill="no" tools:targetApi="O"/>
+
+    <EditText
+        android:id="@+id/registro_apellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/apellidos"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/registro_nombre"
+        app:layout_constraintStart_toStartOf="@id/registro_nombre"
+        android:layout_marginTop="10dp"
+        android:importantForAutofill="no" tools:targetApi="O"/>
+
+    <EditText
+        android:id="@+id/registro_telf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/tel_fono"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@id/registro_apellidos"
+        app:layout_constraintStart_toStartOf="@id/registro_nombre"
+        android:layout_marginTop="10dp"
+        android:importantForAutofill="no" tools:targetApi="O"/>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/registro_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@android:string/cancel"
+        app:layout_constraintTop_toBottomOf="@id/registro_telf"
+        app:layout_constraintStart_toStartOf="@id/registro_telf"/>
+
+    <Button
+        android:id="@+id/registro_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registro"
+        app:layout_constraintEnd_toEndOf="@id/registro_telf"
+        app:layout_constraintTop_toTopOf="@id/registro_cancel"/>
+
+    <TextView
+        android:id="@+id/tv_title_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/registro"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">QuickTrade</string>
+    <string name="e_mail_ejemplo_com">e-mail@ejemplo.com</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="registro">Registro</string>
+    <string name="entrar">Entrar</string>
+    <string name="tel_fono">Teléfono</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="crear_producto">Crear Producto</string>
+    <string name="nombre_del_producto">Nombre del Producto</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="precio">Precio</string>
+    <string-array name="categorias">
+        <item>Tecnología</item>
+        <item>Coches</item>
+        <item>Hogar</item>
+    </string-array>
+</resources>
