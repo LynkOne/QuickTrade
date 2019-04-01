@@ -20,7 +20,8 @@
         <activity android:name=".Home" />
         <activity android:name=".CrearProductos" />
         <activity android:name=".ModificarProductos" />
-        <activity android:name=".ModificarUsuario"></activity>
+        <activity android:name=".ModificarUsuario" />
+        <activity android:name=".BuscarProductosCategoria"></activity>
     </application>
 
 </manifest>

@@ -24,6 +24,7 @@ public class ModificarUsuario extends AppCompatActivity {
     private DatabaseReference dbr;
     private FirebaseAuth mAuth;
     private FirebaseUser user;
+    private int userpos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,7 @@ public class ModificarUsuario extends AppCompatActivity {
         dbr.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                userpos=0;
                 for (DataSnapshot ds:dataSnapshot.getChildren()) {
                     if(ds.getKey().compareTo(user.getUid())==0){
                         Usuario aux=ds.getValue(Usuario.class);
@@ -48,6 +50,9 @@ public class ModificarUsuario extends AppCompatActivity {
                         nombre.setText(aux.getNombre());
                         apellidos.setText(aux.getApellidos());
                         telefono.setText(aux.getTelefono());
+                        break;
+                    }else{
+                        userpos++;
                     }
 
 
@@ -64,9 +69,18 @@ public class ModificarUsuario extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dbr.addListenerForSingleValueEvent(new ValueEventListener() {
+                DatabaseReference dbr2= FirebaseDatabase.getInstance().getReference("usuarios").child(user.getUid());
+                final Usuario useraux = new Usuario();
+                useraux.setNombre(nombre.getText().toString());
+                useraux.setApellidos(apellidos.getText().toString());
+                useraux.setTelefono(telefono.getText().toString());
+                dbr2.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        //Guardar cambios
+                        dataSnapshot.getRef().child("nombre").setValue(useraux.getNombre());
+                        dataSnapshot.getRef().child("apellidos").setValue(useraux.getApellidos());
+                        dataSnapshot.getRef().child("telefono").setValue(useraux.getTelefono());
 
                     }
 
