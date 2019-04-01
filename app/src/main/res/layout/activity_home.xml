@@ -26,4 +26,11 @@
         android:layout_height="wrap_content"
         android:text="Modificar mis datos de usuario"
         app:layout_constraintTop_toBottomOf="@id/modificar_productos" />
+
+    <Button
+        android:id="@+id/buscar_productos_categoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar productos por categoria"
+        app:layout_constraintTop_toBottomOf="@id/modificar_datos_usuario"/>
 </android.support.constraint.ConstraintLayout>

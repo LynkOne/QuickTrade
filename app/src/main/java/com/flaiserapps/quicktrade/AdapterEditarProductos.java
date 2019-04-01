@@ -25,6 +25,7 @@ public class AdapterEditarProductos extends RecyclerView.Adapter<AdapterEditarPr
     private ArrayList<Productos> productos;
     private ArrayList<String> IDs;
     private Context contexto;
+    //Inicio getters y setters
 
     public ArrayList<Productos> getProductos() {
         return productos;
@@ -42,7 +43,9 @@ public class AdapterEditarProductos extends RecyclerView.Adapter<AdapterEditarPr
         this.IDs = IDs;
     }
 
+    //Fin getters y setters
 
+    //Clase ProductoViewHolder
     public static class ProductoViewHolder extends RecyclerView.ViewHolder{
          ImageButton delete, save;
          EditText nombreprod, descprod, precioprod;
@@ -57,7 +60,9 @@ public class AdapterEditarProductos extends RecyclerView.Adapter<AdapterEditarPr
 
         }
     }
+    //Fin de la clase ProductoViewHolder
 
+    //Constructor de la clase
     public AdapterEditarProductos(ArrayList<Productos> productos, ArrayList<String> IDs, Context contexto) {
         //Constructor del adapter, recibe arraylist de productos
         Log.d("hectorr", "Constructor llamado AdapterEditarProductos");
@@ -65,6 +70,7 @@ public class AdapterEditarProductos extends RecyclerView.Adapter<AdapterEditarPr
         this.contexto=contexto;
         this.IDs=IDs;
     }
+    //Fin constructor de la clase
 
     @NonNull
     @Override
