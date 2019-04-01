@@ -21,7 +21,8 @@
         <activity android:name=".CrearProductos" />
         <activity android:name=".ModificarProductos" />
         <activity android:name=".ModificarUsuario" />
-        <activity android:name=".BuscarProductosCategoria"></activity>
+        <activity android:name=".BuscarProductosCategoria" />
+        <activity android:name=".BuscarProductosUsuario"></activity>
     </application>
 
 </manifest>

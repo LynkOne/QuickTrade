@@ -95,4 +95,9 @@ public class Usuario implements Parcelable {
             return new Usuario[size];
         }
     };
+
+    @Override
+    public String toString(){
+        return nombre;
+    }
 }
