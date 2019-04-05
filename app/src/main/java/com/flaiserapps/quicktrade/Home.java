@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Home extends AppCompatActivity {
-    private Button creaprod, modprod, modusu, buscprodcat, buscarprodusu;
+    private Button creaprod, modprod, modusu, buscprodcat, buscarprodusu, buscarprodnombre;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +17,7 @@ public class Home extends AppCompatActivity {
         modusu=(Button) this.findViewById(R.id.modificar_datos_usuario);
         buscprodcat=(Button) this.findViewById(R.id.buscar_productos_categoria);
         buscarprodusu=(Button) this.findViewById(R.id.buscar_productos_usuario);
+        buscarprodnombre=(Button) this.findViewById(R.id.buscar_productos_nombre);
 
         creaprod.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +51,13 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), BuscarProductosUsuario.class);
+                startActivity(i);
+            }
+        });
+        buscarprodnombre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), BuscarProductosNombre.class);
                 startActivity(i);
             }
         });

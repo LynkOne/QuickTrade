@@ -40,4 +40,11 @@
         android:layout_height="wrap_content"
         android:text="Buscar productos por usuario"
         app:layout_constraintTop_toBottomOf="@id/buscar_productos_categoria"/>
+
+    <Button
+        android:id="@+id/buscar_productos_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar productos por nombre"
+        app:layout_constraintTop_toBottomOf="@id/buscar_productos_usuario"/>
 </android.support.constraint.ConstraintLayout>
